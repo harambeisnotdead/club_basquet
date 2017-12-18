@@ -1,0 +1,59 @@
+<openerp>
+  <data>
+    <!-- explicit list view definition -->
+    <!--
+    <record model="ir.ui.view" id="club_basquet.list">
+      <field name="name">clubBasquet list</field>
+      <field name="model">club_basquet.club_basquet</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+    -->
+
+    <!-- actions opening views on models -->
+    <!--
+    <record model="ir.actions.act_window" id="club_basquet.action_window">
+      <field name="name">clubBasquet window</field>
+      <field name="res_model">club_basquet.club_basquet</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    -->
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="club_basquet.action_server">
+      <field name="name">clubBasquet server</field>
+      <field name="model_id" ref="model_club_basquet_club_basquet"/>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    <!--
+    <menuitem name="clubBasquet" id="club_basquet.menu_root"/>
+    -->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="club_basquet.menu_1" parent="club_basquet.menu_root"/>
+    <menuitem name="Menu 2" id="club_basquet.menu_2" parent="club_basquet.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="club_basquet.menu_1_list" parent="club_basquet.menu_1"
+              action="club_basquet.action_window"/>
+    <menuitem name="Server to list" id="club_basquet" parent="club_basquet.menu_2"
+              action="club_basquet.action_server"/>
+    -->
+  </data>
+</openerp>
