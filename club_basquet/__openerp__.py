@@ -1,17 +1,18 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "clubBasquet",
+    'name': "club_basquet",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
-
-    'description': """
-        Long description of module's purpose
+        Modulo para la gestion de un club de basquet
     """,
 
-    'author': "My Company",
-    'website': "http://www.yourcompany.com",
+    'description': """
+        Modulo para odoo9 orientado a la gestion de un club de basquet con varios
+        equipos, jugadores, entrenadores, etc.
+    """,
+
+    'author': "Saúl, Cristian i Sergi",
+    'website': "http://www.exemple.com",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/master/openerp/addons/base/module/module_data.xml
