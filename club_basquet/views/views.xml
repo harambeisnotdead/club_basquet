@@ -1,31 +1,40 @@
-<openerp>
-  <data>
-    <!-- explicit list view definition -->
-    <!--
-    <record model="ir.ui.view" id="club_basquet.list">
-      <field name="name">clubBasquet list</field>
-      <field name="model">club_basquet.club_basquet</field>
-      <field name="arch" type="xml">
-        <tree>
-          <field name="name"/>
-          <field name="value"/>
-          <field name="value2"/>
-        </tree>
-      </field>
-    </record>
-    -->
+<!-- <openerp>
+    <data> -->
+<!-- Test record -->
+<!-- <record model="club_basquet.equip" id="equip">
+            <field name="nom">Test</field>
+            <field name="color"/>
+            <field name="patrocinador">USSR</field>
+        </record> -->
 
-    <!-- actions opening views on models -->
-    <!--
-    <record model="ir.actions.act_window" id="club_basquet.action_window">
-      <field name="name">clubBasquet window</field>
-      <field name="res_model">club_basquet.club_basquet</field>
-      <field name="view_mode">tree,form</field>
-    </record>
-    -->
+<!-- explicit list view definition -->
+<!-- <record model="ir.ui.view" id="club_basquet.list">
+          <field name="name">Club basquet</field>
+          <field name="model">club_basquet.equip</field>
+          <field name="arch" type="xml">
+            <tree>
+              <field name="nom"/>
+              <field name="color"/>
+              <field name="patrocinador"/>
+            </tree>
+          </field>
+        </record> -->
 
-    <!-- server action to the one above -->
-    <!--
+<!-- actions opening views on models -->
+<!-- <record model="ir.actions.act_window" id="club_basquet.action_window">
+            <field name="name">club_basquet window</field>
+            <field name="res_model">club_basquet.equip</field>
+            <field name="view_mode">tree,form</field>
+            <field name="nom">Equip</field>
+            <field name="color">Color</field>
+            <field name="patrocinador">Patrocinador</field>
+        </record> -->
+
+<!-- <menuitem name="club_basquet" id="club_basquet.menu_root"/> -->
+<!-- <menuitem name="Equip" id="club_basquet.menu_equip" action="club_basquet.action_window"/> -->
+
+<!-- server action to the one above -->
+<!--
     <record model="ir.actions.server" id="club_basquet.action_server">
       <field name="name">clubBasquet server</field>
       <field name="model_id" ref="model_club_basquet_club_basquet"/>
@@ -39,21 +48,131 @@
     </record>
     -->
 
-    <!-- Top menu item -->
-    <!--
-    <menuitem name="clubBasquet" id="club_basquet.menu_root"/>
-    -->
-    <!-- menu categories -->
-    <!--
+<!-- Top menu item -->
+
+<!-- menu categories -->
+<!--
     <menuitem name="Menu 1" id="club_basquet.menu_1" parent="club_basquet.menu_root"/>
     <menuitem name="Menu 2" id="club_basquet.menu_2" parent="club_basquet.menu_root"/>
     -->
-    <!-- actions -->
-    <!--
+<!-- actions -->
+<!--
     <menuitem name="List" id="club_basquet.menu_1_list" parent="club_basquet.menu_1"
               action="club_basquet.action_window"/>
     <menuitem name="Server to list" id="club_basquet" parent="club_basquet.menu_2"
               action="club_basquet.action_server"/>
     -->
-  </data>
+<!-- </data>
+</openerp> -->
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="view_club_basquet_equip_form">
+            <field name="name">club_basquet.equip.form</field>
+            <field name="model">club_basquet.equip</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="club_basquet.equip">
+                    <group>
+                        <field name="nom"/>
+                        <field name="color"/>
+                        <field name="patrocinador"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_club_basquet_jugador_form">
+            <field name="name">club_basquet.jugador.form</field>
+            <field name="model">club_basquet.jugador</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="club_basquet.jugador">
+                    <group>
+                        <field name="nom"/>
+                        <field name="dni"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <!-- <record model="ir.ui.view" id="view_basquet_persona_form">
+            <field name="name">basquet.persona.form</field>
+            <field name="model">basquet.persona</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="basquet.persona">
+                    <group><field name="name"/><field name="cognom1"/><field name="cognom2"/><field name="naixement"/><field name="dni"/></group>
+                </form>
+            </field>
+        </record> -->
+
+        <record model="ir.ui.view" id="view_club_basquet_equip_tree">
+            <field name="name">club_basquet.equip.tree</field>
+            <field name="model">club_basquet.equip</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="club_basquet.equip">
+                    <field name="nom" string="Nom"/>
+                    <field name="color" string="Color de la samarreta"/>
+                    <field name="patrocinador" string="Patrocinador equip"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_club_basquet_jugador_tree">
+            <field name="name">club_basquet.jugador.tree</field>
+            <field name="model">club_basquet.jugador</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="club_basquet.jugador">
+                    <field name="nom" string="Nom"/>
+                    <field name="dni" string="DNI"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- <record model="ir.ui.view" id="view_basquet_persona_tree">
+            <field name="name">basquet.persona.tree</field>
+            <field name="model">basquet.persona</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="basquet.persona"><field name="name" string="Nom de la persona"/><field name="cognom1" string="Posició del jugador"/><field name="cognom2" string="Data de naixement del jugador"/><field name="naixement" string="Si està a la infermeria"/><field name="dni" string="Dorsal d'aquest any"/></tree>
+            </field>
+        </record> -->
+
+        <record model="ir.actions.act_window" id="action_club_basquet_equip">
+            <field name="name">test</field>
+            <field name="nom">equipTest</field>
+            <field name="color">colorTest</field>
+            <field name="patrocinador">patrocinadorTest</field>
+            <field name="res_model">club_basquet.equip</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_club_basquet_jugador">
+            <field name="name">test</field>
+            <field name="nom">nom</field>
+            <field name="dni">DNI</field>
+            <field name="res_model">club_basquet.jugador</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- <record model="ir.actions.act_window" id="action_basquet_persona">
+            <field name="name">nom</field>
+            <field name="cognom1">posicio</field>
+            <field name="cognom2">datanaixement</field>
+            <field name="naixement">ko</field>
+            <field name="dni">numero</field>
+            <field name="res_model">basquet.persona</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record> -->
+
+        <menuitem name="Club Basquet" id="menu_club_basquet"/>
+        <menuitem name="Equip" id="menu_club_basquet_equip" action="action_club_basquet_equip" parent="menu_club_basquet"/>
+        <menuitem name="Jugador" id="menu_club_basquet_jugador" action="action_club_basquet_jugador" parent="menu_club_basquet"/>
+        <!-- <menuitem name="Entrenador" id="menu_basquet_persona" action="action_basquet_persona" parent="menu_basquet"/> -->
+    </data>
 </openerp>
