@@ -1,2 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_club_basquet_club_basquet,club_basquet.club_basquet,model_club_basquet_club_basquet,,1,0,0,0
+access_club_basquet_equip,club_basquet.equip,model_club_basquet_equip,,1,0,0,0
+access_club_basquet_entrenador,club_basquet.entrenador,model_club_basquet_entrenador,,1,0,0,0
+access_club_basquet_jugador,club_basquet.jugador,model_club_basquet_jugador,,1,0,0,0
+access_club_basquet_caricatura,club_basquet.caricatura,model_club_basquet_caricatura,,1,0,0,0
