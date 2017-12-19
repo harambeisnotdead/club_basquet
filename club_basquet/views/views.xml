@@ -1,6 +1,10 @@
 <openerp>
     <data>
-        <!-- Form -->
+        <!--
+            Formularis (Form Views): Serveixen per introduir dades als records
+            que després odoo emmagatzema en la base de dades.
+        -->
+        <!-- Form View de Equip -->
         <record model="ir.ui.view" id="view_club_basquet_equip_form">
             <field name="name">club_basquet.equip.form</field>
             <field name="model">club_basquet.equip</field>
@@ -16,6 +20,7 @@
             </field>
         </record>
 
+        <!-- Form View de Entrenador -->
         <record model="ir.ui.view" id="view_club_basquet_entrenador_form">
             <field name="name">club_basquet.entrenador.form</field>
             <field name="model">club_basquet.entrenador</field>
@@ -30,6 +35,7 @@
             </field>
         </record>
 
+        <!-- Form View de Jugador -->
         <record model="ir.ui.view" id="view_club_basquet_jugador_form">
             <field name="name">club_basquet.jugador.form</field>
             <field name="model">club_basquet.jugador</field>
@@ -44,6 +50,7 @@
             </field>
         </record>
 
+        <!-- Form View de Caricatura -->
         <record model="ir.ui.view" id="view_club_basquet_caricatura_form">
             <field name="name">club_basquet.caricatura.form</field>
             <field name="model">club_basquet.caricatura</field>
@@ -57,7 +64,11 @@
             </field>
         </record>
 
-        <!-- Tree -->
+        <!--
+            Trees o llistes (Tree Views): Serveixen per mostrar les dades dels
+            records.
+        -->
+        <!-- Tree View de Equip -->
         <record model="ir.ui.view" id="view_club_basquet_equip_tree">
             <field name="name">club_basquet.equip.tree</field>
             <field name="model">club_basquet.equip</field>
@@ -71,6 +82,7 @@
             </field>
         </record>
 
+        <!-- Tree View de Entrenador -->
         <record model="ir.ui.view" id="view_club_basquet_entrenador_tree">
             <field name="name">club_basquet.entrenador.tree</field>
             <field name="model">club_basquet.entrenador</field>
@@ -83,6 +95,7 @@
             </field>
         </record>
 
+        <!-- Tree View de Jugador -->
         <record model="ir.ui.view" id="view_club_basquet_jugador_tree">
             <field name="name">club_basquet.jugador.tree</field>
             <field name="model">club_basquet.jugador</field>
@@ -95,6 +108,7 @@
             </field>
         </record>
 
+        <!-- Tree View de Caricatura -->
         <record model="ir.ui.view" id="view_club_basquet_caricatura_tree">
             <field name="name">club_basquet.caricatura.tree</field>
             <field name="model">club_basquet.caricatura</field>
@@ -106,7 +120,11 @@
             </field>
         </record>
 
-        <!-- Action -->
+        <!--
+            Actions: Representen una acció, en el nostre cas les utilitzem per
+            visualitzar un model i les seves diferents views (tree, form, etc).
+        -->
+        <!-- Action Window Equip -->
         <record model="ir.actions.act_window" id="action_club_basquet_equip">
             <field name="name">Equip</field>
             <field name="res_model">club_basquet.equip</field>
@@ -114,6 +132,7 @@
             <field name="view_mode">tree,form</field>
         </record>
 
+        <!-- Action Window Entrenador -->
         <record model="ir.actions.act_window" id="action_club_basquet_entrenador">
             <field name="name">Entrenador</field>
             <field name="res_model">club_basquet.entrenador</field>
@@ -121,6 +140,7 @@
             <field name="view_mode">tree,form</field>
         </record>
 
+        <!-- Action Window Jugador -->
         <record model="ir.actions.act_window" id="action_club_basquet_jugador">
             <field name="name">Jugador</field>
             <field name="res_model">club_basquet.jugador</field>
@@ -128,6 +148,7 @@
             <field name="view_mode">tree,form</field>
         </record>
 
+        <!-- Action Window Caricatura -->
         <record model="ir.actions.act_window" id="action_club_basquet_caricatura">
             <field name="name">Caricatura</field>
             <field name="res_model">club_basquet.caricatura</field>
@@ -135,6 +156,10 @@
             <field name="view_mode">tree,form</field>
         </record>
 
+        <!--
+            Menuitems: Representen els diferents menus i submenus. Estan lligats
+            a un action window.
+        -->
         <menuitem name="Club Basquet" id="menu_club_basquet"/>
         <menuitem name="Equip" id="menu_club_basquet_equip" action="action_club_basquet_equip" parent="menu_club_basquet"/>
         <menuitem name="Entrenador" id="menu_club_basquet_entrenador" action="action_club_basquet_entrenador" parent="menu_club_basquet"/>
