@@ -10,13 +10,13 @@ from openerp import models, fields, api
 class club_basquet_equip(models.Model):
     _name = "club_basquet.equip"
     nom = fields.Char(string="Nom", required=True)
-    color = fields.Selection(["Vermell", "Verd", "Blau", "Groc", "Taronja"], string="Color")
+    color = fields.Char(string="Color")
     patrocinador = fields.Char(string="Patrocinador")
 
 class club_basquet_entrenador(models.Model):
     _name = "club_basquet.entrenador"
     nom = fields.Char(string="Nom")
-    dni = fields.Char(string="DNI", required=True)
+    dni = fields.Char(string="DNI", required=True, size=9)
 
 class club_basquet_jugador(models.Model):
     _name = "club_basquet.jugador"
